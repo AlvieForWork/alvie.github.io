@@ -1,0 +1,575 @@
+/*---CSS Reset 加註其他的條件---*/
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;   
+	/* 使之貼其父元素，才不會有圖片過大情況發生 */
+	height: auto;
+}
+body {
+	font-family: "Microsoft JhengHei","微軟正黑體",serif;
+}
+/* CSS Reset end */
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #EFE9E7;
+    font-family: "微軟正黑體"
+}
+/*------close按鈕設計------*/
+.aside {
+    display: none;
+    background: orange;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 1em;
+    width: 270px;
+    max-height: 400px;
+}
+.aside a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1em 0.5em;
+    transition: all 0.8s;
+}
+.aside li {
+    border-bottom: 2px dashed #fff ;
+}
+.close {
+    font-size: 40px;
+    background: orange;
+    border: none;
+    margin-bottom: 0.5em;
+}
+.aside a:hover {
+    color: #3D1101;;
+}
+
+/*------close按鈕設計------*/
+.header {
+    background: url(https://upload.cc/i1/2019/07/03/qewz7p.png) no-repeat;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 42px;
+}
+.top-menu h1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+.top-menu a {
+    display: block;
+    font-weight: bolder;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 10px;
+}
+.top-menu .menu a {
+    border-bottom: 3px solid transparent;
+}
+.top-menu .menu a:hover {
+    border-bottom: 3px solid orange;
+}
+.top-menu .menu {
+    display: flex;
+}
+.top-menu .menu li {
+    margin-left: 39px;
+}
+/*------open按鈕設計------*/
+.open {
+    display: none;
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.7);;
+    border: none;
+    color: #fff;
+}
+/*------open按鈕設計------*/
+@media(max-width:767px){
+    .header {
+        background: url(https://upload.cc/i1/2019/07/03/rt3INV.png) no-repeat;
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media(max-width:569px){
+    .top-menu {
+        padding: 0 10px;
+    }
+    .top-menu h1 {
+        font-size: 36px;
+    }
+    .top-menu .menu {
+        display: none;
+    }
+    .open {
+        display: inline-block;
+    }
+    .active .aside {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+    }
+}
+
+/*----------------------*/
+.banner {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 35px 0;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.banner h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 16px;
+}
+.banner h2 br {
+    display: none;
+}
+.banner p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+@media(max-width:768px){
+    .banner {
+        left: 180px;
+    }
+}
+@media(max-width:569px){
+    
+    .banner {
+        max-width: 300px;
+        margin-top: 45px;
+    }
+    .banner h2 br {
+        display: block;
+    }
+}
+@media(max-width:320px){
+    .banner h2 {
+        font-size: 22px;
+    }
+}
+/*----------------------*/
+.content {
+    margin: 50px 52px 30px;
+    color: #3D1101;
+    font-weight: bolder;
+}
+.lineWrap {
+    padding: 0 0 31px 0;
+    text-align: center;
+}
+.line {
+    display: inline-block;
+    position: relative;
+    
+}
+.line h3 {
+    font-size: 20px;
+    line-height: 32px;
+}
+.line h3:before , .line h3:after { 
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 50%;
+    border: 1px solid #979797;
+    background: #979797;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -55%;
+}
+.line h3:after {
+    left: -55%;
+}
+@media(max-width:414px){
+    .line h3:before , .line h3:after { 
+        display: none;
+    }
+}
+/*-------- 偽元素line線-----------*/
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+.main img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.main h3 {
+    font-size: 18px;
+    margin-bottom: 11px;
+    text-align: center;
+}
+.item p {
+    line-height: 1.6;
+}
+@media(max-width:767px){
+    .item {
+        width: 32%;
+    }
+}
+@media(max-width:569px){
+    .main {
+        flex-direction: column; 
+    }
+    .item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/*-------餐廳特色介紹---------*/
+
+.chef {
+    padding: 0 77px 0 42px;
+    background: #3D1101;
+    color: #EFE9E7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.4;
+}
+.chefphoto img {
+    height: 100%;
+    width: 100%;
+}
+.chefphoto {
+    background: url(../images/main_chef_brown.png);
+    width: 50%;
+    height: 460px;
+}
+.chef .chefname h3 {
+    font-size: 20px;
+    line-height: 32px;
+}
+.chef .chefname h4 {
+    margin-bottom: 1em;
+}
+.chefname {
+    width: 45%;
+    margin-left: 5%;
+}
+@media(max-width: 900px){
+    .chef {
+        padding: 0 3%;
+    }
+    .chefphoto {
+        background: url(../images/main_chef_brown_pad.png) no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .chefname {
+        width: 47%;
+        margin-left: 3%;
+    }
+}
+@media(max-width: 569px){
+    .chef {
+        flex-direction: column;
+    }
+    .chefphoto {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .chefname {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 414px){
+    .chef {
+        padding: 0;
+    }
+    .chefphoto {
+        width: 100%;
+    }
+}
+/*-------主廚介紹---------*/
+
+.opinion_title {
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 50px 0 32px;
+    text-align: center;
+    color: #3D1101;
+}
+.opinion {
+    padding: 0 42px 50px;
+    color: #3D1101;
+    display: flex;
+    justify-content: space-between;
+}
+.person {
+    display: flex;
+    justify-content: space-between;
+    width: 32%;
+} 
+.message {
+    padding-top: 27px;
+} 
+.pic {
+    border-radius: 50%;
+    margin-right: 13px;
+    width: 67px;
+    height: 67px;
+}
+.picbig {
+    display: none;
+}
+.message h3 , .message p {
+    font-weight: 600;
+}
+.message h3 {
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+.message p {
+    line-height: 24px;
+    margin-bottom: 1em;
+} 
+.message h4 {
+    text-align: right;
+}
+@media(max-width:767px){
+    .opinion {
+        flex-direction: column;
+    }
+    .person {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .pic {
+        display: none;
+    }
+    .picbig {
+        width: 134px;
+        height: 134px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .message p {
+        margin-bottom: 10px;
+    } 
+}
+@media(max-width:414px){
+    .person { 
+        flex-direction: column;
+        align-items: center;
+    }
+    .message h3 {
+        text-align: center;
+        margin-bottom: 11px;
+    }
+    .message {
+        padding-top: 20px;
+    } 
+}
+/*---------------別人的感想------------*/
+.ask {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 50px 0 38px;
+    background: #FAFAFA;
+    color: #3D1101;
+    line-height: 1.3;
+}
+.location {
+    padding: 0 42px 50px 42px;
+    background: #FAFAFA;
+    color: #3D1101;
+    font-weight: bolder;
+    display: flex;
+}
+.pure-form fieldset {
+    padding: 0;
+}
+.booking {
+    width: 50%;
+}
+.map {
+    margin-right: 3%;
+    width: 47%;
+}
+.original{
+    height: 386px;
+}
+.mapbig {
+    display: none;
+}
+@media(max-width:768px){
+    .location {
+        flex-direction: column;
+        padding: 0 30px 50px;
+    }
+    .map {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+    .original {
+        display: none;
+    }
+    .mapbig {
+        display: inline-block;
+    }
+    .booking {
+        width: 100%;
+    }
+}
+@media(max-width:569px){
+    .location {
+        padding: 0 5px 50px;
+    }
+    .mapbig {
+        width: 100%;
+        height: 386px;
+    }
+}
+.pure-form input[type=text],
+.pure-form input[type=tel],
+.pure-form input[type=email],
+.pure-form input[type=number]
+ {
+    display: block;
+    width: 100%;
+    height: 32px;
+    margin: 8px 0 14px;
+    background: #FFFFFF;
+    border: 1px solid #cccccc;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    border-radius: 3px;
+}
+.location .pure-form input[type=radio]{
+     margin-right: 45px;
+ }
+.btn {
+    margin-top: 32.2px;
+    text-align: right;
+}
+.btn button[type=submit]{
+    margin-left: 11px;
+    border-radius: 3px; 
+    padding: 0.4em 1.2em;
+}
+.cancel {
+    background: rgba(0,0,0,0.35);
+}
+.sent {
+    background: #F56C23;
+}
+
+/*---------------表尾------------*/
+.footer {
+    color: #3D1101;
+    line-height: 1.5;
+    padding: 5% 5% 3%;
+    font-weight: bolder;
+}
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.icon h2 {
+    font-size: 48px;
+    text-align: right;
+}
+.about {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+.contact {
+    float: left;
+    width: 30%;
+}
+.icon {
+    float: right;
+    width: 35%;
+}
+.icon-logo {
+    float: right;
+    font-size: 36px;
+}
+.icon-logo a {
+    margin-left: 12px;
+}
+.icon-logo .sns-gplus {
+    color: #DB4437;
+}
+.icon-logo .sns-twitter {
+    color: #41ABE1;
+}
+.icon-logo .sns-facebook {
+    color: #3A5795;
+    margin-right: 5px;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+
+}
+@media(max-width:768px){
+    .about {
+        width: 45%;
+        margin-right: 10%;
+    }
+    .contact {
+        width: 45%;
+    }
+    .icon {
+        width: 100%;
+        display: block;
+        text-align: right;
+    }
+}
+@media(max-width:569px){
+    .about , .contact , .icon {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer p {
+        margin-bottom: 30px;
+    }
+}
+/*--------------返回上端---------------*/
+.top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+.top a img {
+    width: 50px;
+    height: 50px;
+}
+
+
+

@@ -1,0 +1,372 @@
+/*---CSS Reset 加註其他的條件---*/
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;   
+	/* 使之貼其父元素，才不會有圖片過大情況發生 */
+	height: auto;
+}
+body {
+	font-family: "Microsoft JhengHei","微軟正黑體",serif;
+}
+/* CSS Reset end */
+
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: #EFE9E7;
+    font-family: "微軟正黑體"
+}
+/*------closw按鈕設計------*/
+.aside {
+    display: none;
+    background: orange;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 1em;
+    width: 270px;
+}
+.aside a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1em 0.5em;
+    transition: all 0.8s;
+}
+.aside li {
+    border-bottom: 2px dashed #fff ;
+}
+.close {
+    font-size: 40px;
+    background: orange;
+    border: none;
+    margin-bottom: 0.5em;
+}
+.aside a:hover {
+    color: #3D1101;;
+}
+
+/*------closw按鈕設計------*/
+.header {
+    background: url(https://upload.cc/i1/2019/07/03/qewz7p.png) no-repeat;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 42px;
+}
+.top-menu h1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+.top-menu a {
+    display: block;
+    font-weight: bolder;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 10px;
+}
+.top-menu .menu a {
+    border-bottom: 3px solid transparent;
+}
+.top-menu .menu a:hover {
+    border-bottom: 3px solid orange;
+}
+.top-menu .menu {
+    display: flex;
+}
+.top-menu .menu li {
+    margin-left: 39px;
+}
+/*------open按鈕設計------*/
+.open {
+    display: none;
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.7);;
+    border: none;
+    color: #fff;
+}
+/*------open按鈕設計------*/
+@media(max-width:767px){
+    .header {
+        background: url(https://upload.cc/i1/2019/07/03/rt3INV.png) no-repeat;
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media(max-width:569px){
+    .top-menu {
+        padding: 0 10px;
+    }
+    .top-menu h1 {
+        font-size: 36px;
+    }
+    .top-menu .menu {
+        display: none;
+    }
+    .open {
+        display: inline-block;
+    }
+    .active .aside {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+    }
+}
+
+
+/*----------------------*/
+.banner {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 35px 0;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.banner h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 16px;
+}
+.banner h2 br {
+    display: none;
+}
+.banner p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+@media(max-width:768px){
+    .banner {
+        left: 180px;
+    }
+}
+@media(max-width:569px){
+    
+    .banner {
+        max-width: 300px;
+        margin-top: 45px;
+    }
+    .banner h2 br {
+        display: block;
+    }
+}
+@media(max-width:320px){
+    .banner h2 {
+        font-size: 22px;
+    }
+}
+/*----------------------*/
+
+.content {
+    margin: 50px auto;
+    height: auto;
+}
+.content h2 , .content h3 , .form-login h4 {
+    font-weight: bolder;
+    color: #3D1101;
+    line-height: 1.2;
+    text-align: center;
+}
+.content h2 {
+    font-size: 40px;
+}
+.content h3 {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.form-login {
+    margin: 0 auto;
+    max-width: 700px;
+    width: 90%;
+    padding: 15px 15px 8px;
+    border-top: 3px solid #FF5E45 ;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    color: #3D1101;
+}
+.form-login h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.register {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+.terms {
+    width: 45%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.form-login form {
+    width: 50%;
+}
+.form-login .inputWrap input {
+    margin: 0.5em 0;
+    width: 100%;
+    padding: 0.7em 0.7em 0.7em 40px;
+}
+/* 注意有權重問題，會被蓋過去 */
+.inputWrap input[type=email] {
+    margin-bottom: 1em;
+}
+.inputWrap {
+    position: relative;
+}
+.inputWrap i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    color: rgba(61,17,0,0.50);
+}
+.forget {
+    padding-bottom:5% ;
+    color:#f1672c;
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.enter {
+    float: right;
+    background: rgba(0,0,0,0.35);
+    border-radius: 3px;
+    color: #fff;
+    padding: 8px 0;
+    width: 38%;
+    border: none;
+    cursor: pointer;
+    background: #F56C23;
+}
+.clearfix:after {
+    display: table;
+    content: ' ';
+    clear: both;
+}
+@media(max-width:569px){
+    .register {
+        flex-direction: column;
+        align-items: center;
+    }
+    .terms {
+        width: 80%;
+    }
+    .form-login form {
+        width: 80%;
+    }
+    .register {
+        height: auto;
+    }
+    .terms {
+        margin-bottom: 20px;
+    }
+    .forget {
+        margin-bottom: 0;
+    }
+}
+@media(max-width:480px){
+    .form-login .pure-form fieldset .enroll {
+        margin-right: 10%;
+    }
+}
+
+
+/*-------------------------*/
+
+.footer {
+    color: #3D1101;
+    line-height: 1.5;
+    padding: 5% 5% 3%;
+    font-weight: bolder;
+}
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.icon h2 {
+    font-size: 48px;
+    text-align: right;
+}
+.about {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+.contact {
+    float: left;
+    width: 30%;
+}
+.icon {
+    float: right;
+    width: 35%;
+}
+.icon-logo {
+    float: right;
+    font-size: 36px;
+}
+.icon-logo a {
+    margin-left: 12px;
+}
+.icon-logo .sns-gplus {
+    color: #DB4437;
+}
+.icon-logo .sns-twitter {
+    color: #41ABE1;
+}
+.icon-logo .sns-facebook {
+    color: #3A5795;
+    margin-right: 5px;
+}
+@media(max-width:768px){
+    .about {
+        width: 45%;
+        margin-right: 10%;
+    }
+    .contact {
+        width: 45%;
+    }
+    .icon {
+        width: 100%;
+        display: block;
+        text-align: right;
+    }
+}
+@media(max-width:569px){
+    .about , .contact , .icon {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer p {
+        margin-bottom: 30px;
+    }
+}
+
+/*--------------返回上端---------------*/
+.top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+.top a img {
+    width: 50px;
+    height: 50px;
+}
+
+
